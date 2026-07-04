@@ -36,9 +36,7 @@ El proyecto comprende:
 
 # Tecnologías
 
-- AWS
 - Azure
-- Google Cloud Platform
 - Kubernetes
 - API First
 - Event Driven Architecture
