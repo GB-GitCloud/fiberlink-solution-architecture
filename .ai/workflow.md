@@ -66,6 +66,14 @@ Business Understanding Report
 
 ↓
 
+Readiness Assessment
+
+↓
+
+APROBADO
+
+↓
+
 Functional Requirements
 
 ↓
