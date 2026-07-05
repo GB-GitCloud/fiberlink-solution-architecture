@@ -228,19 +228,23 @@ Maintaining traceability improves architectural governance and simplifies valida
 
 # PD-009 – Assumption Management
 
-**Status**
+## Status
 
 Approved
 
-**Decision**
+## Decision
 
-Architectural assumptions shall never be treated as confirmed facts.
+Explicit assumptions are permitted whenever repository information is insufficient to continue the analysis.
 
-Whenever assumptions are required, they shall be documented through the corresponding ADR.
+Assumptions shall never be presented as confirmed facts.
 
-**Rationale**
+Every assumption shall be documented in the corresponding `assumptions.md` file.
 
-Assumptions directly influence architectural quality and must remain visible and reviewable.
+Validated assumptions that influence the solution architecture may later become Architecture Decision Records (ADR).
+
+## Rationale
+
+Explicit assumptions improve transparency, traceability and architectural governance while avoiding undocumented design decisions.
 
 ---
 

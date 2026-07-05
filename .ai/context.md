@@ -100,9 +100,11 @@ Requirements Engineering
 Includes:
 
 - Architecture Brief per Initiative
-- Functional Requirements (RF)
-- Non-Functional Requirements (RNF)
-- Acceptance Criteria (Gherkin)
+- Business Understanding Report
+- Assumptions Register
+- Functional Requirements (FR)
+- Non-Functional Requirements (NFR)
+- Acceptance Criteria
 
 Requirements are organized independently for each selected initiative.
 
@@ -181,32 +183,72 @@ images
 
 # Primary Sources
 
-For Deliverable 2
+## Deliverable 2 – Requirements Engineering
 
-Primary source:
+### Primary Source
 
-README.md located inside each initiative folder.
+The primary source for Requirements Engineering is the `README.md` located inside each initiative folder.
 
-Those documents represent the Architecture Brief.
+Each `README.md` represents the official **Architecture Brief** for its corresponding initiative.
 
-They are the only input required for generating:
+The Architecture Brief provides the business context required to begin the Requirements Engineering process.
 
+The expected outputs of this phase are:
+
+- Business Understanding Report
+- Assumptions Register
+- Functional Requirements (FR)
+- Non-Functional Requirements (NFR)
+- Acceptance Criteria
+
+Once these artifacts have been reviewed and approved, they become the official source of requirements for all subsequent activities, particularly Deliverable 3 (Solution Architecture).
+
+---
+
+## Deliverable 3 – Solution Architecture
+
+### Primary Sources
+
+The primary inputs for Solution Architecture are the approved Requirements Engineering artifacts:
+
+- Business Understanding Report
+- Assumptions Register
 - Functional Requirements
 - Non-Functional Requirements
 - Acceptance Criteria
 
-For Deliverable 3
+Additional architectural inputs include:
 
-Primary sources include:
-
-- Initiative Architecture Brief
-- Requirements
-- Acceptance Criteria
-- ADR
+- Architecture Decision Records (ADR)
 - Architecture Guidelines
 - Architecture Patterns
 
-Enterprise Architecture diagrams should only be consulted when additional architectural context is required.
+Enterprise Architecture documentation (AS-IS) shall only be consulted when additional architectural context is required or to support gap analysis.
+
+The Solution Architecture shall always be derived from the approved Requirements Engineering artifacts while maintaining end-to-end traceability.
+
+---
+
+# Assumptions Policy
+
+The project recognizes that available repository information may occasionally be insufficient to complete business or architectural analysis.
+
+When this occurs, explicit assumptions are permitted as part of the Requirements Engineering process.
+
+Every assumption shall:
+
+- Be uniquely identified.
+- Be documented in the corresponding `assumptions.md` file.
+- Include a clear rationale.
+- Identify where it applies.
+- Identify the affected artifacts.
+- Include an impact assessment.
+- Include a confidence level.
+- Be reviewed and validated before becoming part of the official solution.
+
+Assumptions shall never be presented as confirmed facts.
+
+Validated assumptions that influence the solution architecture may later become Architecture Decision Records (ADR).
 
 ---
 
@@ -240,7 +282,23 @@ Business Initiative
 
 ↓
 
-Requirements
+Architecture Brief
+
+↓
+
+Business Understanding Report
+
+↓
+
+Assumptions Register
+
+↓
+
+Functional Requirements
+
+↓
+
+Non-Functional Requirements
 
 ↓
 
@@ -248,7 +306,7 @@ Acceptance Criteria
 
 ↓
 
-Architecture Decisions
+Architecture Decision Records (ADR)
 
 ↓
 

@@ -618,6 +618,53 @@ Cuando un supuesto influya en una decisión arquitectónica, deberá documentars
 
 ---
 
+# BP-017 – Mantener la Trazabilidad de los Supuestos
+
+## Objetivo
+
+Garantizar que todos los supuestos utilizados durante el análisis puedan rastrearse a lo largo de todo el ciclo de vida del proyecto.
+
+## Práctica
+
+Todo supuesto deberá registrarse en el documento `assumptions.md`.
+
+Cada supuesto deberá indicar, como mínimo:
+
+- Identificador único.
+- Descripción.
+- Justificación.
+- Motivo por el cual fue necesario formularlo.
+- Artefacto donde fue identificado.
+- Artefactos que dependen de él.
+- Nivel de impacto.
+- Nivel de confianza.
+- Estado de validación.
+
+Los artefactos posteriores podrán referenciar el identificador del supuesto cuando dependan de él.
+
+## Reglas
+
+Los supuestos podrán ser referenciados desde:
+
+- Business Understanding Report.
+- Requisitos Funcionales.
+- Requisitos No Funcionales.
+- Criterios de Aceptación.
+- Alternativas TO-BE.
+- Architecture Decision Records (ADR).
+
+Cuando un supuesto deje de ser una hipótesis y se convierta en una decisión de arquitectura, deberá registrarse mediante el ADR correspondiente.
+
+## Beneficios
+
+- Incrementa la trazabilidad del proyecto.
+- Hace visible la incertidumbre durante el análisis.
+- Facilita la validación de los requisitos.
+- Permite justificar las decisiones arquitectónicas.
+- Reduce inconsistencias entre documentos.
+
+---
+
 # Mejora Continua
 
 Estas políticas y buenas prácticas constituyen un documento vivo.

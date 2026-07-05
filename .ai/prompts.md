@@ -52,23 +52,35 @@ Do not modify the repository structure.
 
 Understand the purpose of every major folder before generating documentation.
 
+Identify existing requirements artifacts before concluding that documentation is missing.
+
+Respect the workflow defined in `.ai/workflow.md` when determining the current project phase.
+
 ---
 
 ## Step 3 – Understand the Current Project Phase
 
 The project is currently focused on **Deliverable 2 – Requirements Engineering**.
 
-The objective of this deliverable is to define the Functional Requirements (FR), Non-Functional Requirements (NFR) and Acceptance Criteria for the selected business initiatives.
+The objective of this deliverable is to define the business and solution requirements for each selected initiative.
 
 The repository already contains an Architecture Brief (`README.md`) for each initiative.
 
-These Architecture Briefs are the authoritative business input for Requirements Engineering.
+These Architecture Briefs represent the primary business input for Requirements Engineering.
 
-Functional Requirements, Non-Functional Requirements and Acceptance Criteria may or may not exist at this stage of the project.
+The expected Requirements Engineering artifacts for each initiative are:
 
-When they exist, they shall be considered the official source of requirements and shall be used as the primary input for all subsequent deliverables, especially Deliverable 3 (Solution Architecture).
+- Business Understanding Report
+- Assumptions Register
+- Functional Requirements (FR)
+- Non-Functional Requirements (NFR)
+- Acceptance Criteria
 
-Until they are available, the Architecture Brief shall be considered the primary source of information.
+Business Understanding and the Assumptions Register provide the business context required to derive the Functional Requirements.
+
+Whenever these artifacts already exist and have been approved, they become the official source of requirements for all subsequent deliverables, especially Deliverable 3 (Solution Architecture).
+
+Until they are available, the Architecture Brief shall be considered the authoritative source of information.
 
 ---
 
@@ -93,12 +105,13 @@ Never generate alternative versions unless explicitly requested.
 
 Before generating any artifact, you shall:
 
-- Read existing documentation.
+- Read existing repository documentation.
 - Reuse repository terminology.
-- Preserve document structure.
+- Preserve repository structure.
 - Maintain end-to-end traceability.
 - Follow the Architecture Policy defined in `.ai/architecture.md`.
 - Respect the repository organization.
+- Distinguish between facts, assumptions and architectural decisions.
 
 You shall not:
 
@@ -106,9 +119,15 @@ You shall not:
 - Modify approved documentation.
 - Change the repository organization.
 - Generate deliverables that have not been requested.
-- Treat assumptions as confirmed facts.
+- Present assumptions as confirmed facts.
 
-Whenever assumptions are necessary, they shall be explicitly identified and documented according to the Architecture Policy.
+When repository information is insufficient to continue the analysis:
+
+- Formulate explicit assumptions only when necessary.
+- Assign a unique identifier to every assumption.
+- Document assumptions in the corresponding `assumptions.md` file.
+- Include rationale, affected artifacts, impact and confidence level.
+- Ensure assumptions remain fully traceable throughout the repository.
 
 ---
 
@@ -118,19 +137,20 @@ Do not generate any project documentation.
 
 Instead, analyze the repository and confirm your understanding by providing:
 
-1. Executive summary of the project.
+1. Executive Summary of the project.
 2. Current project phase.
 3. Selected business initiatives.
 4. Objective of Deliverable 2.
 5. Expected outputs of Deliverable 2.
 6. Repository organization.
-7. Primary documentation that will be used to generate the current deliverables.
-8. Inconsistencies, ambiguities or missing information detected in the repository.
-9. Cross-document dependencies identified.
-10. Risks or recommendations that may affect future deliverables.
+7. Primary documentation that will be used during Requirements Engineering.
+8. Inconsistencies, ambiguities or missing information detected.
+9. Cross-document dependencies.
+10. Risks or recommendations affecting future deliverables.
+11. Potential assumptions that should be documented in the corresponding Assumptions Register before Requirements Engineering begins.
 
 This assessment is informational only.
 
 Do not modify any file.
 
-Wait for the next instruction before generating or modifying any documentation.
+Wait for the next instruction before generating or modifying project documentation.

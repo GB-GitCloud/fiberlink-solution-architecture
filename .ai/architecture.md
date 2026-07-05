@@ -309,18 +309,65 @@ Each ADR should include:
 
 ---
 
-# Assumptions
+# Knowledge Classification
 
-Whenever assumptions are required, they shall be:
+Repository information shall be interpreted according to the following knowledge hierarchy.
 
-- Clearly identified.
-- Explicitly documented.
-- Recorded in the corresponding Architecture Decision Record (ADR).
-- Supported by a rationale.
-- Evaluated for their potential impact on the proposed architecture.
-- Reviewed as the project evolves.
+## Facts
 
-Assumptions shall never be presented as confirmed facts.
+Information explicitly documented and approved within the repository.
+
+Facts may be used directly during analysis.
+
+---
+
+## Assumptions
+
+When repository information is insufficient to continue the analysis, explicit assumptions are permitted.
+
+Assumptions shall:
+
+- Be uniquely identified.
+- Be documented in the initiative `assumptions.md`.
+- Include a rationale.
+- Identify the affected artifacts.
+- Include an impact assessment.
+- Include a confidence level.
+- Never be presented as confirmed facts.
+
+---
+
+## Architecture Decisions
+
+Architecture Decisions represent validated design choices.
+
+Architecture Decisions shall only be documented as Architecture Decision Records (ADR).
+
+Validated assumptions that influence the architecture may eventually become ADRs.
+
+The lifecycle is therefore:
+
+Fact
+
+↓
+
+Analysis
+
+↓
+
+Assumption
+
+↓
+
+Validation
+
+↓
+
+Architecture Decision
+
+↓
+
+ADR
 
 ---
 
